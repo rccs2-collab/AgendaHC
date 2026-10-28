@@ -1,7 +1,7 @@
 # AgendaHC
-Grupo: 3
+Grupo: 3  
 Integrantes:
-* Tiago
+* Tiago Menezes
 * José Eduardo
 * Arthur
 * Caio Leitão

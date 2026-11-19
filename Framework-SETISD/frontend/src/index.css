@@ -2,11 +2,36 @@
 
 @theme {
   --font-family-sans: 'Nunito', sans-serif;
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
 
   --color-paper-bg: #f4f3ef;
   --color-paper-text: #66615b;
-  --color-paper-sidebar: #424242;
-  --color-paper-active-link: #5a5a5a; /* Light Gray for active link */
+  --color-paper-sidebar: #33312e;
+  --color-paper-active-link: #4a4743; /* Light Gray for active link */
+
+  --color-ink: #2b2925;
+  --color-ink-muted: #6b665f;
+  --color-line: #e3e0d8;
+  --color-line-strong: #d3cfc5;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #faf9f6;
+  --color-acao: #3d6d6e;
+  --color-acao-hover: #335c5d;
+  --color-acao-suave: #e4eeee;
+  --color-lista-ink: #2c5c5d;
+  --color-lista-bg: #dfecec;
+  --color-espera-ink: #7a5100;
+  --color-espera-bg: #fbefd4;
+  --color-chegada-ink: #5d5851;
+  --color-chegada-bg: #ecebe6;
+  --color-separar-ink: #a33811;
+  --color-separar-bg: #fbe4d9;
+  --color-agrupar-ink: #22627a;
+  --color-agrupar-bg: #dff0f6;
+  --color-ok-ink: #2f6b49;
+  --color-ok-bg: #dff1e6;
+  --color-ordem-ink: #574887;
+  --color-ordem-bg: #ebe7f5;
 
   /* Default */
   --color-paper-default: #66615b;
@@ -85,5 +110,70 @@
 
   .form-control-icon {
     @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+  }
+}
+
+@layer base {
+  ::selection {
+    background: var(--color-acao-suave);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-acao);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-color: var(--color-line-strong) transparent;
+    scrollbar-width: thin;
+  }
+
+  input[type='date'],
+  input[type='text'],
+  input[type='search'],
+  input[type='number'],
+  select,
+  textarea {
+    accent-color: var(--color-acao);
+    caret-color: var(--color-acao);
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+.Vue-Toastification__toast {
+  font-family: var(--font-sans);
+  border-radius: 8px;
+  min-height: 0;
+  padding: 12px 16px;
+  box-shadow: 0 6px 20px -6px rgba(43, 41, 37, 0.35);
+}
+.Vue-Toastification__toast--success,
+.Vue-Toastification__toast--info,
+.Vue-Toastification__toast--default {
+  background: var(--color-ink);
+  color: #ffffff;
+}
+.Vue-Toastification__toast--error {
+  background: var(--color-separar-ink);
+  color: #ffffff;
+}
+.Vue-Toastification__toast-body {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.Vue-Toastification__toast--success .Vue-Toastification__icon {
+  color: #a9d8bc;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-spin {
+    animation: none;
   }
 }

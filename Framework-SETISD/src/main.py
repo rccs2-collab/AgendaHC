@@ -10,6 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from .resources.database import DatabaseManager, Base
+from .models import agenda as _modelos_agenda
+from .controllers.fila_controller import semear_dados_exemplo
+from .providers.implementations.solicitacao_csv_provider import SolicitacaoCsvProvider
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -34,6 +37,13 @@ async def lifespan(app: FastAPI):
     async with app.state.app_db.engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     print("App SQLite tables checked/created.")
+
+    csv_solicitacoes = os.getenv("SOLICITACAO_CSV_PATH", "data/solicitacoes_sinteticas.csv")
+    if os.path.exists(csv_solicitacoes):
+        itens = await SolicitacaoCsvProvider(csv_solicitacoes).listar_itens_solicitados()
+        async for session in app.state.app_db.get_session():
+            await semear_dados_exemplo(session, itens)
+        print("AgendaHC: regras e listas de exemplo verificadas.")
 
     yield
 
@@ -109,8 +119,10 @@ if os.path.exists(assets_dir):
 if os.path.exists(static_dir):
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
 # Roteadores da API
-from .routers import paciente, auth, admin, health
+from .routers import paciente, auth, admin, health, fila, regras
 app.include_router(health.router)
+app.include_router(fila.router)
+app.include_router(regras.router)
 app.include_router(paciente.router)
 app.include_router(auth.router)
 app.include_router(admin.router)

@@ -1,86 +1,50 @@
 <template>
   <div class="relative h-screen overflow-hidden md:flex">
-    <!-- Mobile Menu Header -->
     <div class="bg-paper-sidebar text-gray-100 flex justify-between md:hidden shrink-0">
-      <router-link to="/" class="block p-4 text-white font-bold">{{ SYSTEM_TITLE }}</router-link>
-      <button @click="sidebarOpen = !sidebarOpen" class="p-4 focus:outline-none focus:bg-paper-active-link">
+      <router-link to="/fila" class="block p-4 text-white font-extrabold">{{ SYSTEM_TITLE }}</router-link>
+      <button @click="sidebarOpen = !sidebarOpen" class="p-4 focus:outline-none focus:bg-paper-active-link" aria-label="Abrir menu">
         <Bars3Icon class="h-6 w-6" />
       </button>
     </div>
 
-    <!-- Sidebar (Expansível / Recolhível) -->
-    <aside 
+    <aside
       :class="[
         sidebarOpen ? 'translate-x-0' : '-translate-x-full',
-        isCollapsed ? 'md:w-20' : 'md:w-64'
-      ]" 
-      class="bg-paper-sidebar text-gray-100 pt-7 pb-2 px-2 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition-all duration-300 ease-in-out z-20 h-full shrink-0 flex flex-col justify-between"
+        isCollapsed ? 'md:w-[72px]' : 'md:w-56'
+      ]"
+      class="bg-paper-sidebar text-gray-200 pt-5 pb-2 px-2 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition-all duration-200 ease-out z-20 h-full shrink-0 flex flex-col justify-between"
     >
       <div>
-        <!-- Clique em "Nome do Sistema" recolhe/expande a barra lateral -->
-        <div 
-          @click="toggleSidebar" 
-          title="Clique para recolher / expandir o menu"
-          class="cursor-pointer text-white flex items-center space-x-3 px-3 mb-6 hover:opacity-90 transition duration-150 group"
+        <button
+          type="button"
+          @click="toggleSidebar"
+          title="Recolher / expandir o menu"
+          class="w-full text-left text-white flex items-center gap-3 px-3 mb-5 rounded hover:bg-paper-active-link/60 py-1.5 transition-colors"
         >
-          <CubeTransparentIcon class="h-8 w-8 shrink-0 group-hover:scale-105 transition-transform" />
-          <span v-if="!isCollapsed" class="text-xl font-extrabold leading-snug break-words select-none">
+          <QueueListIcon class="h-7 w-7 shrink-0 text-[#a9c6c7]" />
+          <span v-if="!isCollapsed" class="text-lg font-extrabold leading-tight select-none">
             {{ SYSTEM_TITLE }}
+            <span class="block text-[11px] font-semibold text-gray-400 tracking-normal">Central de Marcação</span>
           </span>
-        </div>
+        </button>
 
-        <div class="px-3 my-4">
-          <div class="border-t border-white border-opacity-20"></div>
-        </div>
-
-        <!-- Links de Navegação -->
-        <nav class="space-y-2">
-          <router-link 
-            to="/" 
-            :title="isCollapsed ? 'Início' : ''"
-            :class="[isCollapsed ? 'justify-center px-2' : 'px-4']"
-            class="flex items-center space-x-3 py-2.5 rounded transition duration-200 hover:bg-paper-active-link hover:text-white"
+        <nav class="space-y-0.5" aria-label="Navegação principal">
+          <router-link
+            v-for="item in navegacao"
+            :key="item.to"
+            v-show="!item.auth || authStore.isAuthenticated"
+            :to="item.to"
+            :title="isCollapsed ? item.rotulo : ''"
+            :class="[isCollapsed ? 'justify-center px-2' : 'px-3']"
+            class="flex items-center gap-3 py-2 rounded text-sm font-semibold text-gray-300 transition-colors duration-150 hover:bg-paper-active-link/70 hover:text-white"
           >
-            <HomeIcon class="h-6 w-6 shrink-0"/>
-            <span v-if="!isCollapsed" class="truncate">Início</span>
-          </router-link>
-
-          <router-link 
-            to="/componentes" 
-            :title="isCollapsed ? 'Componentes' : ''"
-            :class="[isCollapsed ? 'justify-center px-2' : 'px-4']"
-            class="flex items-center space-x-3 py-2.5 rounded transition duration-200 hover:bg-paper-active-link hover:text-white"
-          >
-            <CubeIcon class="h-6 w-6 shrink-0" />
-            <span v-if="!isCollapsed" class="truncate">Componentes</span>
-          </router-link>
-
-          <router-link 
-            v-if="authStore.isAuthenticated" 
-            to="/exemplo" 
-            :title="isCollapsed ? 'Exemplo' : ''"
-            :class="[isCollapsed ? 'justify-center px-2' : 'px-4']"
-            class="flex items-center space-x-3 py-2.5 rounded transition duration-200 hover:bg-paper-active-link hover:text-white"
-          >
-            <DocumentTextIcon class="h-6 w-6 shrink-0" />
-            <span v-if="!isCollapsed" class="truncate">Exemplo</span>
-          </router-link>
-          
-          <router-link 
-            v-if="authStore.isAuthenticated" 
-            to="/configuracoes" 
-            :title="isCollapsed ? 'Configurações' : ''"
-            :class="[isCollapsed ? 'justify-center px-2' : 'px-4']"
-            class="flex items-center space-x-3 py-2.5 rounded transition duration-200 hover:bg-paper-active-link hover:text-white"
-          >
-            <Cog6ToothIcon class="h-6 w-6 shrink-0"/>
-            <span v-if="!isCollapsed" class="truncate">Configurações</span>
+            <component :is="item.icone" class="h-5 w-5 shrink-0" />
+            <span v-if="!isCollapsed" class="truncate">{{ item.rotulo }}</span>
           </router-link>
         </nav>
       </div>
 
-      <!-- Rodapé de Versão da Sidebar -->
-      <div v-if="!isCollapsed" class="px-4 pt-3 pb-1 border-t border-white/10 text-xs text-gray-400 mt-auto truncate transition-opacity duration-200">
+      <div v-if="!isCollapsed" class="px-3 pt-3 pb-1 border-t border-white/10 text-xs text-gray-400 mt-auto">
         <p class="font-semibold text-gray-200 truncate">{{ APP_NAME }}</p>
         <p class="text-[11px] text-gray-400 truncate">Versão {{ APP_VERSION }} | HC-UFPE</p>
       </div>
@@ -89,49 +53,43 @@
       </div>
     </aside>
 
-    <!-- Content -->
-    <div class="flex-1 flex flex-col bg-paper-bg overflow-y-auto h-full">
-      <header class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-md border-b border-gray-300 sticky top-0 z-10">
-        <div>
-          <h1 class="text-2xl font-semibold text-paper-text">{{ $route.name }}</h1>
-        </div>
+    <div class="flex-1 flex flex-col bg-paper-bg overflow-hidden h-full min-w-0">
+      <header class="flex justify-between items-center px-6 h-14 bg-surface border-b border-line shrink-0">
+        <h1 class="text-lg font-bold text-ink">{{ $route.meta.titulo || $route.name }}</h1>
         <div>
           <router-link v-if="!authStore.isAuthenticated" to="/login">
             <Button variant="primary">
               <template #icon>
                 <ArrowRightOnRectangleIcon class="h-5 w-5" />
               </template>
-              Login
+              Entrar
             </Button>
           </router-link>
           <ProfileDropdown v-else />
         </div>
       </header>
-      <main class="flex-1">
-        <div class="container py-4 md:py-6">
-          <router-view />
-        </div>
+      <main class="flex-1 min-h-0 overflow-y-auto">
+        <router-view />
       </main>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import {
-  HomeIcon,
-  CubeIcon,
-  DocumentTextIcon,
+  QueueListIcon,
+  ChartBarIcon,
+  AdjustmentsHorizontalIcon,
   Cog6ToothIcon,
-  CubeTransparentIcon,
   Bars3Icon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/vue/24/outline';
 import ProfileDropdown from '../components/ProfileDropdown.vue';
 import Button from '../components/Button.vue';
 import { useAuthStore } from '../stores/auth';
-import { APP_VERSION, APP_NAME, SYSTEM_TITLE } from '../config/version';
+import { APP_VERSION, APP_NAME, SYSTEM_TITLE, fetchSystemConfig } from '../config/version';
 
 const sidebarOpen = ref(false);
 const isCollapsed = ref(false);
@@ -139,12 +97,20 @@ const isCollapsed = ref(false);
 const route = useRoute();
 const authStore = useAuthStore();
 
+const navegacao = [
+  { to: '/fila', rotulo: 'Fila de marcação', icone: QueueListIcon, auth: true },
+  { to: '/painel', rotulo: 'Painel da gestão', icone: ChartBarIcon, auth: true },
+  { to: '/regras', rotulo: 'Regras de prioridade', icone: AdjustmentsHorizontalIcon, auth: true },
+  { to: '/configuracoes', rotulo: 'Configurações', icone: Cog6ToothIcon, auth: true },
+];
+
 const toggleSidebar = () => {
   isCollapsed.value = !isCollapsed.value;
 };
 
-// Close mobile sidebar on route change
 watch(() => route.path, () => {
   sidebarOpen.value = false;
 });
+
+onMounted(fetchSystemConfig);
 </script>

@@ -6,12 +6,37 @@ import Configuracoes from '../views/Configuracoes.vue';
 
 import Exemplos from '../views/Exemplos.vue';
 import Pacientes from '../views/Pacientes.vue';
+import Fila from '../views/Fila.vue';
+import Painel from '../views/Painel.vue';
+import Regras from '../views/Regras.vue';
 
 const routes = [
   {
     path: '/',
+    redirect: '/fila',
+  },
+  {
+    path: '/inicio',
     name: 'Início',
     component: Home,
+  },
+  {
+    path: '/fila',
+    name: 'Fila',
+    component: Fila,
+    meta: { requiresAuth: true, titulo: 'Fila de marcação' },
+  },
+  {
+    path: '/painel',
+    name: 'Painel',
+    component: Painel,
+    meta: { requiresAuth: true, titulo: 'Painel da gestão' },
+  },
+  {
+    path: '/regras',
+    name: 'Regras',
+    component: Regras,
+    meta: { requiresAuth: true, titulo: 'Regras de prioridade' },
   },
   {
     path: '/login',
@@ -41,8 +66,8 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  linkActiveClass: 'bg-paper-active-link',
-  linkExactActiveClass: 'bg-paper-active-link',
+  linkActiveClass: '!bg-paper-active-link !text-white',
+  linkExactActiveClass: '!bg-paper-active-link !text-white',
 });
 
 router.beforeEach((to, _from, next: NavigationGuardNext) => {

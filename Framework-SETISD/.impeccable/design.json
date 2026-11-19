@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T14:03:49+00:00",
+  "title": "Design System: AgendaHC",
+  "extensions": {
+    "colorMeta": {
+      "acao": {
+        "role": "primary",
+        "displayName": "Ação Teal",
+        "canonical": "#3d6d6e",
+        "tonalRamp": [
+          "#202c2d",
+          "#334c4d",
+          "#446d6e",
+          "#549092",
+          "#78afb0",
+          "#a9c6c7",
+          "#d2dfdf",
+          "#f1f4f4"
+        ]
+      },
+      "acao-hover": {
+        "role": "primary",
+        "displayName": "Ação Teal Deep",
+        "canonical": "#335c5d",
+        "tonalRamp": [
+          "#202c2d",
+          "#334c4d",
+          "#446e6f",
+          "#539192",
+          "#78afb0",
+          "#a8c6c7",
+          "#d2dfdf",
+          "#f1f4f4"
+        ]
+      },
+      "acao-suave": {
+        "role": "primary",
+        "displayName": "Ação Tint",
+        "canonical": "#e4eeee",
+        "tonalRamp": [
+          "#212b2b",
+          "#364a4a",
+          "#496a6a",
+          "#5a8b8b",
+          "#7eaaaa",
+          "#acc4c4",
+          "#d4dede",
+          "#f1f4f4"
+        ]
+      },
+      "lista-ink": {
+        "role": "semantic",
+        "displayName": "Lista Teal Ink",
+        "canonical": "#2c5c5d",
+        "tonalRamp": [
+          "#1e2e2e",
+          "#304f50",
+          "#3f7273",
+          "#4c9899",
+          "#71b5b7",
+          "#a5caca",
+          "#d1e0e1",
+          "#f0f4f4"
+        ]
+      },
+      "lista-bg": {
+        "role": "semantic",
+        "displayName": "Lista Teal Tint",
+        "canonical": "#dfecec",
+        "tonalRamp": [
+          "#212c2c",
+          "#344b4b",
+          "#476c6c",
+          "#578e8e",
+          "#7badad",
+          "#aac5c5",
+          "#d3dede",
+          "#f1f4f4"
+        ]
+      },
+      "espera-ink": {
+        "role": "semantic",
+        "displayName": "Espera Amber Ink",
+        "canonical": "#7a5100",
+        "tonalRamp": [
+          "#3c2e10",
+          "#6c4e13",
+          "#a27110",
+          "#df9607",
+          "#f5b433",
+          "#ecc983",
+          "#efe0c3",
+          "#f8f4ec"
+        ]
+      },
+      "espera-bg": {
+        "role": "semantic",
+        "displayName": "Espera Amber Tint",
+        "canonical": "#fbefd4",
+        "tonalRamp": [
+          "#392d14",
+          "#654e1b",
+          "#96711d",
+          "#cc9519",
+          "#e4b344",
+          "#e3c88c",
+          "#ebe0c6",
+          "#f7f4ed"
+        ]
+      },
+      "chegada-ink": {
+        "role": "semantic",
+        "displayName": "Chegada Stone Ink",
+        "canonical": "#5d5851",
+        "tonalRamp": [
+          "#282725",
+          "#43403d",
+          "#5e5a54",
+          "#7a746b",
+          "#9b958d",
+          "#bbb8b4",
+          "#dad9d7",
+          "#f3f2f2"
+        ]
+      },
+      "chegada-bg": {
+        "role": "semantic",
+        "displayName": "Chegada Stone Tint",
+        "canonical": "#ecebe6",
+        "tonalRamp": [
+          "#292823",
+          "#46443a",
+          "#63604f",
+          "#817d64",
+          "#a19d87",
+          "#bfbcb0",
+          "#dcdbd6",
+          "#f3f3f1"
+        ]
+      },
+      "separar-ink": {
+        "role": "semantic",
+        "displayName": "Separar Vermilion Ink",
+        "canonical": "#a33811",
+        "tonalRamp": [
+          "#381e14",
+          "#642f1c",
+          "#953e1e",
+          "#ca4a1b",
+          "#e26f45",
+          "#e2a48d",
+          "#ebd0c7",
+          "#f7f0ed"
+        ]
+      },
+      "separar-bg": {
+        "role": "semantic",
+        "displayName": "Separar Vermilion Tint",
+        "canonical": "#fbe4d9",
+        "tonalRamp": [
+          "#382014",
+          "#64331c",
+          "#94441e",
+          "#ca541b",
+          "#e27846",
+          "#e2a98d",
+          "#ebd2c7",
+          "#f7f1ee"
+        ]
+      },
+      "ordem-ink": {
+        "role": "semantic",
+        "displayName": "Ordem Violet Ink",
+        "canonical": "#574887",
+        "tonalRamp": [
+          "#231f2d",
+          "#39324d",
+          "#4e4370",
+          "#625294",
+          "#8476b1",
+          "#afa8c8",
+          "#d5d2e0",
+          "#f1f0f4"
+        ]
+      },
+      "ordem-bg": {
+        "role": "semantic",
+        "displayName": "Ordem Violet Tint",
+        "canonical": "#ebe7f5",
+        "tonalRamp": [
+          "#221d2f",
+          "#382d52",
+          "#4c3b77",
+          "#60469f",
+          "#836cbc",
+          "#aea2cd",
+          "#d5d0e2",
+          "#f1f0f5"
+        ]
+      },
+      "agrupar-ink": {
+        "role": "semantic",
+        "displayName": "Agrupar Blue Ink",
+        "canonical": "#22627a",
+        "tonalRamp": [
+          "#1a2c33",
+          "#274b59",
+          "#306c83",
+          "#368eb0",
+          "#5dadcb",
+          "#9ac5d5",
+          "#ccdee5",
+          "#eff4f6"
+        ]
+      },
+      "agrupar-bg": {
+        "role": "semantic",
+        "displayName": "Agrupar Blue Tint",
+        "canonical": "#dff0f6",
+        "tonalRamp": [
+          "#1a2c33",
+          "#274c59",
+          "#306d82",
+          "#3690af",
+          "#5eaeca",
+          "#9ac6d5",
+          "#ccdfe5",
+          "#eff4f6"
+        ]
+      },
+      "ok-ink": {
+        "role": "semantic",
+        "displayName": "OK Green Ink",
+        "canonical": "#2f6b49",
+        "tonalRamp": [
+          "#1e2f25",
+          "#2e513d",
+          "#3d7655",
+          "#499d6d",
+          "#6eba8f",
+          "#a3ccb5",
+          "#d0e1d8",
+          "#f0f5f2"
+        ]
+      },
+      "ok-bg": {
+        "role": "semantic",
+        "displayName": "OK Green Tint",
+        "canonical": "#dff1e6",
+        "tonalRamp": [
+          "#1e2f24",
+          "#2e513c",
+          "#3d7653",
+          "#499d69",
+          "#6eba8b",
+          "#a3ccb3",
+          "#d0e1d7",
+          "#f0f5f2"
+        ]
+      },
+      "paper-bg": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f4f3ef",
+        "tonalRamp": [
+          "#2a2922",
+          "#484537",
+          "#67614c",
+          "#877f5f",
+          "#a69f82",
+          "#c1bdae",
+          "#dddbd5",
+          "#f3f3f1"
+        ]
+      },
+      "paper-sidebar": {
+        "role": "neutral",
+        "displayName": "Charcoal Sidebar",
+        "canonical": "#33312e",
+        "tonalRamp": [
+          "#272625",
+          "#42403d",
+          "#5d5a55",
+          "#78746d",
+          "#99958f",
+          "#bab8b5",
+          "#dad9d8",
+          "#f3f2f2"
+        ]
+      },
+      "paper-active-link": {
+        "role": "neutral",
+        "displayName": "Sidebar Active",
+        "canonical": "#4a4743",
+        "tonalRamp": [
+          "#272625",
+          "#42403e",
+          "#5d5a56",
+          "#78746d",
+          "#99958f",
+          "#bab8b5",
+          "#dad9d8",
+          "#f3f2f2"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#595959",
+          "#737373",
+          "#949494",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "surface-sunken": {
+        "role": "neutral",
+        "displayName": "Sunken",
+        "canonical": "#faf9f6",
+        "tonalRamp": [
+          "#2d2920",
+          "#4c4633",
+          "#6e6444",
+          "#928254",
+          "#b0a278",
+          "#c7bfa9",
+          "#dfdcd2",
+          "#f4f3f1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#2b2925",
+        "tonalRamp": [
+          "#282725",
+          "#43413c",
+          "#5f5b54",
+          "#7b756b",
+          "#9b968d",
+          "#bcb9b4",
+          "#dad9d7",
+          "#f3f2f2"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#6b665f",
+        "tonalRamp": [
+          "#282625",
+          "#42403d",
+          "#5e5a55",
+          "#79746c",
+          "#9a958e",
+          "#bbb8b4",
+          "#dad9d7",
+          "#f3f2f2"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#e3e0d8",
+        "tonalRamp": [
+          "#2a2823",
+          "#474338",
+          "#655f4d",
+          "#847b61",
+          "#a49b84",
+          "#c0bcaf",
+          "#dcdad5",
+          "#f3f3f1"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "canonical": "#d3cfc5",
+        "tonalRamp": [
+          "#292823",
+          "#46423a",
+          "#635e4f",
+          "#827964",
+          "#a19a87",
+          "#bfbbb0",
+          "#dcdad6",
+          "#f3f3f1"
+        ]
+      },
+      "paper-disabled": {
+        "role": "neutral",
+        "displayName": "Disabled",
+        "canonical": "#e0e0e0",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#595959",
+          "#737373",
+          "#949494",
+          "#b8b8b8",
+          "#d9d9d9",
+          "#f2f2f2"
+        ]
+      },
+      "faixa-30": {
+        "role": "data",
+        "displayName": "Faixa até 30 dias",
+        "canonical": "#c9d9d9",
+        "tonalRamp": [
+          "#222a2a",
+          "#384848",
+          "#4d6666",
+          "#608686",
+          "#83a5a5",
+          "#aec1c1",
+          "#d5dddd",
+          "#f1f3f3"
+        ]
+      },
+      "faixa-60": {
+        "role": "data",
+        "displayName": "Faixa 31 a 60 dias",
+        "canonical": "#e9c46f",
+        "tonalRamp": [
+          "#372d16",
+          "#614d1f",
+          "#8f6e23",
+          "#c29223",
+          "#dbb04d",
+          "#dec791",
+          "#e9dfc8",
+          "#f7f4ee"
+        ]
+      },
+      "faixa-90": {
+        "role": "data",
+        "displayName": "Faixa 61 a 90 dias",
+        "canonical": "#d98a2b",
+        "tonalRamp": [
+          "#362817",
+          "#5f4321",
+          "#8c5e26",
+          "#be7a28",
+          "#d79a51",
+          "#dcbb93",
+          "#e8dac9",
+          "#f6f3ee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "figure-lg": {
+        "displayName": "Figure large",
+        "purpose": "Painel totals."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Queue summary strip; colored by the reason counted."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Top-bar page title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Detail-panel patient name, rule name, queue position."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Panel headings in Painel and Regras."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Table cells and prose."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Column heads, section heads, form labels, reason chips; sentence case."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Status tags, combination alerts, subiu N mark."
+      }
+    },
+    "shadows": [
+      {
+        "name": "rail-lift",
+        "value": "0 1px 2px rgba(43,41,37,0.08)",
+        "purpose": "Active unidade in the rail, paired with a 1px line ring."
+      },
+      {
+        "name": "toast",
+        "value": "0 6px 20px -6px rgba(43,41,37,0.35)",
+        "purpose": "Bottom-left toasts."
+      }
+    ],
+    "motion": [
+      {
+        "name": "fila-move",
+        "value": "transform 480ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Queue re-rank: rows slide to new index keeping identity. Removed under prefers-reduced-motion."
+      },
+      {
+        "name": "fila-enter",
+        "value": "opacity 200ms ease-out",
+        "purpose": "Row entering the queue."
+      },
+      {
+        "name": "fila-leave",
+        "value": "opacity 160ms ease-out",
+        "purpose": "Row leaving the queue."
+      },
+      {
+        "name": "painel",
+        "value": "opacity 180ms ease-out, transform 180ms ease-out (from translateX(12px))",
+        "purpose": "Detail panel enter/leave. Removed under prefers-reduced-motion."
+      },
+      {
+        "name": "sidebar",
+        "value": "all 200ms ease-out",
+        "purpose": "Sidebar collapse and mobile drawer."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-acao",
+      "description": "The single action color: Registrar, Incluir, Salvar nova versão, Tentar de novo.",
+      "html": "<button class=\"ds-btn-acao\" type=\"button\">Registrar</button> <button class=\"ds-btn-acao\" type=\"button\" disabled>Registrar</button>",
+      "css": ".ds-btn-acao { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); background: var(--color-acao, #3d6d6e); color: #ffffff; border: 0; border-radius: 6px; padding: 6px 12px; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer; } .ds-btn-acao:hover { background: var(--color-acao-hover, #335c5d); } .ds-btn-acao:focus-visible { outline: 2px solid var(--color-acao, #3d6d6e); outline-offset: 2px; } .ds-btn-acao:disabled { background: var(--color-paper-disabled, #e0e0e0); color: var(--color-ink-muted, #6b665f); cursor: default; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secundario",
+      "description": "Ringed white button for secondary actions such as Mostrar mais 60.",
+      "html": "<button class=\"ds-btn-sec\" type=\"button\">Mostrar mais 60</button>",
+      "css": ".ds-btn-sec { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); background: var(--color-surface, #ffffff); color: var(--color-ink, #2b2925); border: 1px solid var(--color-line-strong, #d3cfc5); border-radius: 6px; padding: 6px 12px; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; } .ds-btn-sec:hover { background: var(--color-surface-sunken, #faf9f6); } .ds-btn-sec:focus-visible { outline: 2px solid var(--color-acao, #3d6d6e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Queue search by nome or prontuário with leading icon and teal focus ring.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z\"/></svg><input type=\"search\" placeholder=\"Buscar por nome ou prontuário\" aria-label=\"Buscar paciente\"></label>",
+      "css": ".ds-search { position: relative; display: block; max-width: 28rem; } .ds-search .ds-ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--color-ink-muted, #6b665f); } .ds-search input { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); width: 100%; border: 1px solid var(--color-line-strong, #d3cfc5); background: var(--color-surface, #ffffff); border-radius: 6px; padding: 8px 12px 8px 36px; font-size: 14px; line-height: 20px; color: var(--color-ink, #2b2925); caret-color: var(--color-acao, #3d6d6e); } .ds-search input::placeholder { color: rgba(107,102,95,0.8); } .ds-search input:focus { outline: none; border-color: var(--color-acao, #3d6d6e); box-shadow: 0 0 0 2px rgba(61,109,110,0.2); }"
+    },
+    {
+      "name": "Reason Chips",
+      "kind": "chip",
+      "refersTo": "motivo-lista",
+      "description": "MotivoChip: the printed reason for a queue position, one pill per row.",
+      "html": "<span class=\"ds-chip ds-lista\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 4.75A.75.75 0 0 1 6.75 4h10.5a.75.75 0 0 1 0 1.5H6.75A.75.75 0 0 1 6 4.75ZM6 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H6.75A.75.75 0 0 1 6 10Zm0 5.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H6.75a.75.75 0 0 1-.75-.75ZM1.99 4.75a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1v-.01ZM1.99 15.25a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1v-.01ZM1.99 10a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1V10Z\"/></svg>Lista · Nefrologia</span> <span class=\"ds-chip ds-espera\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z\"/></svg>Espera &gt; 60 dias</span> <span class=\"ds-chip ds-chegada\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z\"/></svg>Ordem de chegada</span>",
+      "css": ".ds-chip { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; padding: 2px 10px; font-size: 12px; line-height: 16px; font-weight: 700; white-space: nowrap; } .ds-chip .ds-ico { width: 14px; height: 14px; flex-shrink: 0; } .ds-lista { background: var(--color-lista-bg, #dfecec); color: var(--color-lista-ink, #2c5c5d); } .ds-espera { background: var(--color-espera-bg, #fbefd4); color: var(--color-espera-ink, #7a5100); } .ds-chegada { background: var(--color-chegada-bg, #ecebe6); color: var(--color-chegada-ink, #5d5851); }"
+    },
+    {
+      "name": "Combination Alert",
+      "kind": "chip",
+      "refersTo": "alerta-separar",
+      "description": "AlertaCombinacao: vermilion for exams that cannot share a day; violet for required order; blue for book-together.",
+      "html": "<span class=\"ds-tag ds-separar\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495ZM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z\"/></svg>Não no mesmo dia</span>",
+      "css": ".ds-tag { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; padding: 1px 6px; font-size: 11px; line-height: 16px; font-weight: 700; white-space: nowrap; } .ds-tag .ds-ico { width: 14px; height: 14px; } .ds-separar { background: var(--color-separar-bg, #fbe4d9); color: var(--color-separar-ink, #a33811); }"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "status-agendado",
+      "description": "StatusTag for recorded outcomes; hidden while Pendente.",
+      "html": "<span class=\"ds-tag ds-ok\">Agendado no AGHU</span> <span class=\"ds-tag ds-contato\">Em contato</span>",
+      "css": ".ds-tag { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; padding: 1px 6px; font-size: 11px; line-height: 16px; font-weight: 700; white-space: nowrap; } .ds-tag .ds-ico { width: 14px; height: 14px; } .ds-ok { background: var(--color-ok-bg, #dff1e6); color: var(--color-ok-ink, #2f6b49); } .ds-contato { background: var(--color-agrupar-bg, #dff0f6); color: var(--color-agrupar-ink, #22627a); }"
+    },
+    {
+      "name": "Queue Row",
+      "kind": "custom",
+      "refersTo": "fila-linha",
+      "description": "Patient row: tabular position, name and prontuário, stacked exams, wait, reason chip. Shows default, moved (subiu N) and selected states.",
+      "html": "<table class=\"ds-fila\"><tbody><tr tabindex=\"0\"><td class=\"ds-pos\"><span class=\"ds-num\">1</span></td><td><p class=\"ds-nome\">ZAILTON XXXX</p><p class=\"ds-sub\">Pront. 30000335</p></td><td class=\"ds-dias\"><b class=\"ds-over\">95</b> <span class=\"ds-sub\">dias</span></td><td><span class=\"ds-chip ds-espera\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z\"/></svg>Espera &gt; 60 dias</span></td></tr><tr class=\"ds-moved\" tabindex=\"0\"><td class=\"ds-pos\"><span class=\"ds-num\">2</span><span class=\"ds-subiu\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z\"/></svg>3</span></td><td><p class=\"ds-nome\">SEVERINO B496ED6</p><p class=\"ds-sub\">Pront. 30000395</p></td><td class=\"ds-dias\"><b>43</b> <span class=\"ds-sub\">dias</span></td><td><span class=\"ds-chip ds-lista\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 4.75A.75.75 0 0 1 6.75 4h10.5a.75.75 0 0 1 0 1.5H6.75A.75.75 0 0 1 6 4.75ZM6 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H6.75A.75.75 0 0 1 6 10Zm0 5.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H6.75a.75.75 0 0 1-.75-.75ZM1.99 4.75a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1v-.01ZM1.99 15.25a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1v-.01ZM1.99 10a1 1 0 0 1 1-1H3a1 1 0 0 1 1 1v.01a1 1 0 0 1-1 1h-.01a1 1 0 0 1-1-1V10Z\"/></svg>Lista · Nefrologia</span></td></tr><tr class=\"ds-sel\" tabindex=\"0\"><td class=\"ds-pos\"><span class=\"ds-num\">3</span></td><td><p class=\"ds-nome\">ESTER 1937E47</p><p class=\"ds-sub\">Pront. 30000074</p></td><td class=\"ds-dias\"><b>21</b> <span class=\"ds-sub\">dias</span></td><td><span class=\"ds-chip ds-chegada\"><svg viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" class=\"ds-ico\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z\"/></svg>Ordem de chegada</span></td></tr></tbody></table>",
+      "css": ".ds-chip { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; padding: 2px 10px; font-size: 12px; line-height: 16px; font-weight: 700; white-space: nowrap; } .ds-chip .ds-ico { width: 14px; height: 14px; flex-shrink: 0; } .ds-lista { background: var(--color-lista-bg, #dfecec); color: var(--color-lista-ink, #2c5c5d); } .ds-espera { background: var(--color-espera-bg, #fbefd4); color: var(--color-espera-ink, #7a5100); } .ds-chegada { background: var(--color-chegada-bg, #ecebe6); color: var(--color-chegada-ink, #5d5851); } .ds-fila { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); width: 100%; border-collapse: collapse; font-size: 14px; color: var(--color-ink, #2b2925); } .ds-fila tr { background: var(--color-surface, #ffffff); border-bottom: 1px solid var(--color-line, #e3e0d8); cursor: pointer; transition: transform 480ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-fila tr:hover { background: var(--color-surface-sunken, #faf9f6); } .ds-fila tr:focus-visible { outline: 2px solid var(--color-acao, #3d6d6e); outline-offset: -2px; } .ds-fila td { padding: 10px 8px; vertical-align: top; } .ds-fila p { margin: 0; } .ds-pos { padding-left: 24px; white-space: nowrap; } .ds-num { font-size: 16px; font-weight: 800; font-variant-numeric: tabular-nums; } .ds-nome { font-weight: 700; } .ds-sub { font-size: 12px; color: var(--color-ink-muted, #6b665f); font-variant-numeric: tabular-nums; } .ds-dias { text-align: right; font-variant-numeric: tabular-nums; } .ds-over { color: var(--color-espera-ink, #7a5100); } .ds-fila tr.ds-moved { background: rgba(223,236,236,0.45); } .ds-subiu { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; border-radius: 4px; padding: 0 4px; font-size: 11px; font-weight: 700; background: var(--color-lista-bg, #dfecec); color: var(--color-lista-ink, #2c5c5d); } .ds-subiu .ds-ico { width: 12px; height: 12px; } .ds-fila tr.ds-sel { background: rgba(228,238,238,0.7); } @media (prefers-reduced-motion: reduce) { .ds-fila tr { transition: none; } }"
+    },
+    {
+      "name": "Unit Rail Item",
+      "kind": "nav",
+      "refersTo": "rail-item",
+      "description": "Unidade rail on paper: active item lifts to white with a ring and the only rest-state shadow.",
+      "html": "<ul class=\"ds-rail\"><li><button type=\"button\" aria-current=\"true\"><span>Todas as unidades</span><span class=\"ds-n\">576</span></button></li><li><button type=\"button\"><span>Medicina Nuclear</span><span class=\"ds-n\">193</span></button></li></ul>",
+      "css": ".ds-rail { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); list-style: none; margin: 0; padding: 8px; width: 240px; background: var(--color-paper-bg, #f4f3ef); } .ds-rail button { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); width: 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; border: 0; background: transparent; border-radius: 6px; padding: 8px 10px; font-size: 14px; font-weight: 600; color: var(--color-ink-muted, #6b665f); text-align: left; cursor: pointer; } .ds-rail button:hover { background: rgba(255,255,255,0.7); color: var(--color-ink, #2b2925); } .ds-rail button:focus-visible { outline: 2px solid var(--color-acao, #3d6d6e); outline-offset: 2px; } .ds-rail button[aria-current] { background: var(--color-surface, #ffffff); color: var(--color-ink, #2b2925); box-shadow: 0 1px 2px rgba(43,41,37,0.08), 0 0 0 1px var(--color-line, #e3e0d8); } .ds-n { font-size: 12px; font-weight: 400; font-variant-numeric: tabular-nums; color: var(--color-ink-muted, #6b665f); }"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "sidebar",
+      "description": "Framework SETISD charcoal sidebar with brand block, nav and version footer.",
+      "html": "<aside class=\"ds-side\"><div><p class=\"ds-brand\">AgendaHC<span>Central de Marcação</span></p><a href=\"#\" class=\"ds-active\">Fila de marcação</a><a href=\"#\">Painel da gestão</a><a href=\"#\">Regras de prioridade</a></div><footer><p>AgendaHC</p><p class=\"ds-v\">Versão 0.1.0 | HC-UFPE</p></footer></aside>",
+      "css": ".ds-side { font-family: var(--font-sans, Nunito, ui-sans-serif, system-ui, sans-serif); width: 224px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; background: var(--color-paper-sidebar, #33312e); padding: 20px 8px 8px; } .ds-brand { margin: 0 12px 20px; color: #ffffff; font-size: 18px; font-weight: 800; line-height: 1.25; } .ds-brand span { display: block; font-size: 11px; font-weight: 600; color: #9ca3af; } .ds-side a { display: block; padding: 8px 12px; border-radius: 4px; font-size: 14px; font-weight: 600; color: #d1d5db; text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-side a:hover { background: rgba(74,71,67,0.7); color: #ffffff; } .ds-side a:focus-visible { outline: 2px solid var(--color-acao, #3d6d6e); outline-offset: 2px; } .ds-side a.ds-active { background: var(--color-paper-active-link, #4a4743); color: #ffffff; } .ds-side footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 12px 12px 4px; font-size: 12px; } .ds-side footer p { margin: 0; color: #e5e7eb; font-weight: 600; } .ds-side footer .ds-v { font-size: 11px; font-weight: 400; color: #9ca3af; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Annotated Queue",
+    "overview": "AgendaHC is a working instrument for a marcador at a desk through a whole shift. It keeps the Framework SETISD shell the hospital already knows: warm paper ground, charcoal sidebar with the version in its footer, Nunito everywhere. The new parts are a deep teal action color and a small set of paired ink-on-tint colors, each tied to exactly one reason or state. Every row is a patient. The reason for the row's position is printed on it as a chip, and the color comes from that reason, not from decoration.\n\nDensity is high and flat. Rows are divided by hairlines, and containers are white panels on paper with a 1px ring. Shadows are almost absent. Numbers that people compare (position, prontuário, days, counts) always use tabular figures. Motion has one job, which is to make a re-rank legible: rows slide to their new place and keep their identity.",
+    "keyCharacteristics": [
+      "Framework SETISD shell evolved, not replaced: paper ground, charcoal sidebar, version footer.",
+      "One action color (teal) for buttons, links, focus, caret, selection and the selected row.",
+      "Ink-on-tint pairs as the semantic vocabulary, always with an icon and a text label.",
+      "Hairline-divided dense tables, tabular figures, no cards inside cards.",
+      "In-place re-rank motion with a persistent \"subiu N\" mark."
+    ],
+    "rules": [
+      {
+        "name": "The Reason Owns the Color Rule",
+        "body": "A hue appears only because a reason or state named in text sits next to it. No color is decorative, and no chip or tag ships without its icon and label.",
+        "section": "colors"
+      },
+      {
+        "name": "The Amber Is Waiting Rule",
+        "body": "Amber is the waiting-time color. Summary figures and wait bands use it as a category color. In a row or per-unit cell, a day count turns amber only when it is over the unit rule's limit (or the 60-day Painel threshold), and stays in ink otherwise.",
+        "section": "colors"
+      },
+      {
+        "name": "The Vermilion Is Trouble Rule",
+        "body": "On chips, tags, text and alerts, vermilion means a conflict between exams or a failure that needs action, and never priority or waiting. The one exception is the top step of the wait-band bar. It differs from the direction contract and should not be extended.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Teal Action Rule",
+        "body": "Acao is the only action color. Lista teal is a reason, not a button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Positions, prontuários, request codes, dates, day counts and every count use the `tabular` utility (tnum), so columns line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels and headings are sentence case pt-BR at normal tracking. The build has no uppercase or letter-spaced labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Density Rule",
+        "body": "Rows are separated by 1px line borders, never by gaps or cards. Rows are top-aligned so a patient's stacked exams read as one row.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ring, Not Shadow Rule",
+        "body": "Containers are surface white with a 1px line ring. A new shadow needs a state to justify it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** print the reason next to every colored mark: icon, text label, and a title for the detail.",
+      "**Do** use acao for every action, link and focus state, and use acao-suave for selection.",
+      "**Do** set every comparable number in tabular figures.",
+      "**Do** say what is missing (\"Sem prontuário no extrato\", \"sem dado\") in ink-muted text instead of leaving a gap.",
+      "**Do** keep keyboard paths: the roving-tabindex queue (arrow keys, Enter opens the panel and focuses its heading, Esc closes and returns focus to the row), a 2px acao focus-visible outline, sr-only labels on summary figures and search, and `role=\"alert\"` on errors.",
+      "**Do** keep re-rank motion in place and identity-preserving, and remove the slide under reduced motion."
+    ],
+    "donts": [
+      "**Don't** color a row's day count amber when it is under the unit limit. Don't use vermilion chips, tags or text for anything that is not a conflict or a failure.",
+      "**Don't** put a card inside a panel or separate rows with gaps. Use hairlines and rings.",
+      "**Don't** use the framework's paper-primary/info/success/warning/danger fills for new actions. White text on them falls below 3:1.",
+      "**Don't** add uppercase tracked labels or eyebrow text above headings.",
+      "**Don't** convey state by tint alone. Every pair carries an icon and words."
+    ]
+  }
+}

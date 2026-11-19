@@ -7,6 +7,9 @@ from .providers.interfaces.paciente_provider_interface import PacienteProviderIn
 from .providers.implementations.paciente_postgres_provider import PacientePostgresProvider
 from .providers.implementations.paciente_csv_provider import PacienteCsvProvider
 from .resources.database import get_aghu_db_session
+from .providers.interfaces.solicitacao_provider_interface import SolicitacaoProviderInterface
+from .providers.implementations.solicitacao_postgres_provider import SolicitacaoPostgresProvider
+from .providers.implementations.solicitacao_csv_provider import SolicitacaoCsvProvider
 
 # 1. Funções "getter" simples e independentes (privadas por convenção)
 def _get_paciente_postgres_provider(
@@ -30,3 +33,22 @@ def get_paciente_provider(strategy: str) -> Callable[..., PacienteProviderInterf
         return _get_paciente_csv_provider
     else:
         raise ValueError(f"Estratégia de provedor desconhecida: {strategy}")
+
+
+
+def _get_solicitacao_postgres_provider(
+    session: AsyncSession = Depends(get_aghu_db_session)
+) -> SolicitacaoProviderInterface:
+    return SolicitacaoPostgresProvider(session=session)
+
+
+def _get_solicitacao_csv_provider() -> SolicitacaoProviderInterface:
+    return SolicitacaoCsvProvider(csv_path=os.getenv("SOLICITACAO_CSV_PATH", "data/solicitacoes_sinteticas.csv"))
+
+
+def get_solicitacao_provider(strategy: str) -> Callable[..., SolicitacaoProviderInterface]:
+    if strategy.upper() == "POSTGRES":
+        return _get_solicitacao_postgres_provider
+    if strategy.upper() == "CSV":
+        return _get_solicitacao_csv_provider
+    raise ValueError(f"Estratégia de provedor desconhecida: {strategy}")
